@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-music-player
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -33,3 +34,6 @@ npm run build
 ```sh
 npm run test:unit
 ```
+=======
+# vue-music-player
+>>>>>>> 10a943d843ce3c2f9d3050fa80ca4c0b71fd61c9
