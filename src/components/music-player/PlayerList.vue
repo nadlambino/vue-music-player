@@ -1,20 +1,20 @@
 <template>
-    <div class="container player-list">
+    <div class="player-list flex-auto mt-2 w-3/12">
         <ul>
             <list-item 
                 v-for="(list, index) in lists" 
                 :key="index" 
                 :list_id="index"
                 :list="list" 
-                :playing="index === playing_id"
+                :playing="index === musicListStore.playing_id"
                 @changeMusic="changeMusic"
             />
         </ul>
     </div>
 </template>
 
-<script>
-import { MUSIC_LIST } from './../../data/music-list';
+<script lang="ts">
+import { musicListStore } from './../../stores/music-list-store';
 import ListItem from './player-list/ListItem.vue';
 
 export default {
@@ -22,16 +22,15 @@ export default {
     components: { ListItem },
     data() {
         return {
-            lists: [],
-            playing_id: 0
+            musicListStore: musicListStore()
         }
     },
     beforeMount() {
-        this.lists = MUSIC_LIST;
+        this.lists = this.musicListStore.lists;
     },
     methods: {
-        changeMusic(list_id) {
-            this.playing_id = list_id;
+        changeMusic(list_id : number) {
+            this.musicListStore.setPlayingId(list_id);
         }
     }
 }
@@ -39,7 +38,6 @@ export default {
 
 <style scoped lang="scss">
 .player-list {
-    width: 40%;
     height: 75vh;
     margin-left: 0;
     overflow-y: scroll;

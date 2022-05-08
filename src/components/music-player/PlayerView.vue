@@ -1,5 +1,5 @@
 <template>
-    <div class="container player-view">
+    <div class="player-view flex-auto hidden md:block mt-2 w-7/12">
     </div>
 </template>
 
@@ -11,7 +11,6 @@ export default {
 
 <style scoped>
 .player-view {
-    width: 60%;
     background-color: var(--vt-c-black-soft);
     height: 75vh;
 }

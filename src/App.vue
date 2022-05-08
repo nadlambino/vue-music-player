@@ -8,6 +8,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppBody from './components/AppBody.vue';
 import AppFooter from './components/AppFooter.vue';
+import './assets/base.css';
 
 export default {
   name: 'App',
@@ -18,9 +19,3 @@ export default {
   }
 }
 </script>
-
-
-<style>
-@import './assets/base.css';
-
-</style>

@@ -1,5 +1,5 @@
 <template>
-    <main class="flex-container">
+    <main class="flex">
         <player-view />
         <player-list />
     </main>

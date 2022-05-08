@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
@@ -73,6 +77,12 @@
   background-color: var(--vt-c-black-mute);
 }
 
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
@@ -96,13 +106,4 @@ a, .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.container {
-  margin: 10px;
 }

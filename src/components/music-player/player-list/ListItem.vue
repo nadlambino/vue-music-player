@@ -1,6 +1,6 @@
 <template>
     <li :class="{'playing-container' : playing}" @click="play(list_id)">
-        <div class="list-main-container flex-container" :class="{'playing' : playing}">
+        <div class="list-main-container" :class="{'playing' : playing}">
             <span class="title">{{list.title}}</span>
         </div>
         <div class="list-sub-container">
@@ -53,22 +53,22 @@ li {
 
     .list-main-container {
         font-size: 12pt;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         .title {
-            white-space: nowrap; 
-            overflow: hidden;
-            text-overflow: ellipsis;
             color: var(--vt-c-text-green-2);
         }
     }
 
     .list-sub-container {
-        font-size: 9pt;
+        font-size: 10pt;
         width: 100%;
         margin-top: 7px;
 
         span {
-            margin-left: 10px;
+            margin-right: 10px;
         }
     }
 
