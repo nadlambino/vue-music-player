@@ -1,18 +1,17 @@
 <template>
-    <main class="flex">
-        <player-view />
-        <player-list />
-    </main>
+	<main class="flex">
+		<player-view />
+		<player-list />
+	</main>
 </template>
 
 <script>
-import PlayerList from './music-player/PlayerList.vue'
-import PlayerView from './music-player/PlayerView.vue'
+import PlayerList from './music-player/PlayerList.vue';
+import PlayerView from './music-player/PlayerView.vue';
 export default {
 	components: { PlayerView, PlayerList },
-    name: 'AppBody'
-}
+	name: 'AppBody',
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

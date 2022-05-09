@@ -1,7 +1,7 @@
 <template>
-  <app-header />
-  <app-body />
-  <app-footer />
+	<app-header />
+	<app-body />
+	<app-footer />
 </template>
 
 <script>
@@ -11,11 +11,11 @@ import AppFooter from './components/AppFooter.vue';
 import './assets/base.css';
 
 export default {
-  name: 'App',
-  components: {
-    AppHeader,
-    AppBody,
-    AppFooter
-  }
-}
+	name: 'App',
+	components: {
+		AppHeader,
+		AppBody,
+		AppFooter,
+	},
+};
 </script>
