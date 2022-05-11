@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { musicListStore } from './../../stores/music-list-store';
+import { musicListStore } from '../../stores/music-list-store';
 import ListItem from './player-list/ListItem.vue';
 
 export default {
@@ -29,7 +29,7 @@ export default {
 		this.lists = this.musicListStore.lists;
 	},
 	methods: {
-		changeMusic(list_id: number) {
+		changeMusic(list_id) {
 			this.musicListStore.setPlayingId(list_id);
 		},
 	},
